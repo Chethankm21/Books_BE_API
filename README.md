@@ -72,7 +72,6 @@ can call following Endpoints by using POSTMAN
   http://localhost:8080/bookservice/books/<id>
 ```
 
-### Note - Replace <id> with actual id 
 
 #----> To Run it as a docker container
 
