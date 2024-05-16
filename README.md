@@ -1,4 +1,4 @@
-# CRUD-Spring-Boot-JPA-MySQL
+# CRUD-Spring-Boot-MySQL
 
 # To Run it in Local system
 
