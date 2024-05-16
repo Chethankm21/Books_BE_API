@@ -17,7 +17,7 @@ RUN wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.100/bin/apache-tomcat-8.5
     rm apache-tomcat-8.5.100.tar.gz
 
 # Copy test.war to webapps
-COPY bookstore-spring-boot-demo-0.0.1-SNAPSHOT.war /opt/tomcat/webapps/
+COPY target/bookstore-spring-boot-demo-0.0.1-SNAPSHOT.war /opt/tomcat/webapps/
 
 # Copy init.sql to container
 COPY init.sql /init.sql

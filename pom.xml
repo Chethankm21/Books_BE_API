@@ -7,7 +7,7 @@
 	<groupId>com.bookstore</groupId>
 	<artifactId>bookstore-spring-boot-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>bookstore-spring-demo</name>
 	<description>Book Store Spring Boot Demo</description>
 
@@ -47,11 +47,12 @@
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- Remove this duplicate entry -->
-		<!--		<dependency>-->
-		<!--			<groupId>mysql</groupId>-->
-		<!--			<artifactId>mysql-connector-java</artifactId>-->
-		<!--		</dependency>-->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>io.springfox</groupId>
@@ -65,6 +66,15 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.1</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
