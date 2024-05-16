@@ -26,10 +26,13 @@ jobs:
         id: maven_build
         run: mvn clean package
 
-      # Step 4: Log in to Docker Hub only if Maven build succeeds
       - name: Log in to Docker Hub
         if: success()
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+        env:
+         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+         echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin || exit 1
 
       # Step 5: Build the Docker image only if Maven build succeeds
       - name: Build Docker image
