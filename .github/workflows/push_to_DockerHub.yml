@@ -39,7 +39,7 @@ jobs:
         if: success()
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/books_api:latest .
 
-      # Step 6: Push the Docker image to Docker Hub only if Docker build succeeds
+      # Step 6: Push the Docker image to DockerHub only if Docker build succeeds
       - name: Push Docker image
         if: success()
         run: docker push ${{ secrets.DOCKER_USERNAME }}/books_api:latest
