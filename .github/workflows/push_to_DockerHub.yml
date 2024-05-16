@@ -37,9 +37,9 @@ jobs:
       # Step 5: Build the Docker image only if Maven build succeeds
       - name: Build Docker image
         if: success()
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/my-app:latest .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/books_api:latest .
 
       # Step 6: Push the Docker image to Docker Hub only if Docker build succeeds
       - name: Push Docker image
         if: success()
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/my-app:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/books_api:latest
