@@ -1,11 +1,11 @@
 # CRUD-Spring-Boot-JPA-MySQL
 
-# CRUD Example of Spring-Boot-REST-JPA-MySQL (BookStore)
+# CRUD Example of Spring-Boot-REST-MySQL
 
 ### 1. You can clone it from github by running following command
 
 ```
-  $ git clone https://github.com/niteshsinghrajput/CRUD-Spring-Boot-JPA-MySQL.git
+  $ git clone https://github.com/Chethankm21/Java-mysql-CRUD.git
 ```
 
 ### 2. Import project into eclipse
@@ -17,23 +17,6 @@
 ### 4. Import src/main/java/resources/book.sql into MySQL database
 
 ### 5. Update database credential and other configuration into application.properties available in src/main/java/resources
-
-```
-
-spring.datasource.url=jdbc:mysql://localhost:3306/bookstore
-spring.datasource.username=root
-spring.datasource.password=
-spring.datasource.tomcat.max-wait=20000
-spring.datasource.tomcat.max-active=50
-spring.datasource.tomcat.max-idle=20
-spring.datasource.tomcat.min-idle=15
-
-spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQLDialect
-spring.jpa.properties.hibernate.id.new_generator_mappings = false
-spring.jpa.properties.hibernate.format_sql = true
-
-logging.level.org.hibernate.SQL=DEBUG
-logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
 
 
 ```
@@ -76,9 +59,9 @@ can call following Endpoints by using POSTMAN
 
 ```
  {
-    "name": "C++",
-    "author": "Nitesh",
-    "publication": "Rajput Publication",
+    "name": "java",
+    "author": "anil",
+    "publication": "MHE Publication",
     "category": "Computer Programming",
     "pages": 1500,
     "price": 240
