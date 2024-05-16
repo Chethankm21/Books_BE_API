@@ -1,5 +1,6 @@
 package com.bookstore.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.bookstore.entity.Book;
 import com.bookstore.services.IBookStoreService;
+import springfox.documentation.spring.web.json.Json;
 
 @Controller
 @RequestMapping("bookservice")
@@ -23,7 +25,20 @@ public class BookStoreController {
 	
 	@Autowired
 	private IBookStoreService service;
-	
+
+	@GetMapping("booksfile")
+	public ResponseEntity<List<Book>> getBooksFile(){
+		List<Book> books = new ArrayList<>();
+		books.add(new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling"));
+		books.add(new Book("To Kill a Mockingbird", "Harper Lee"));
+		books.add(new Book("The Great Gatsby", "F. Scott Fitzgerald"));
+		books.add(new Book("1984", "George Orwell"));
+		books.add(new Book("The Catcher in the Rye", "J.D. Salinger"));
+		return new ResponseEntity<List<Book>>(books, HttpStatus.OK);
+
+
+	}
+
 	@GetMapping("books")
 	public ResponseEntity<List<Book>> getBooks(){
 		
