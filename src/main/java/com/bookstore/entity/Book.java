@@ -37,6 +37,9 @@ public class Book implements Serializable {
 	@Column(name="price")
 	private int price;
 
+	public Book(String s, String s1) {
+	}
+
 	public int getId() {
 		return id;
 	}
