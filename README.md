@@ -1,6 +1,6 @@
 # CRUD-Spring-Boot-JPA-MySQL
 
-# CRUD Example of Spring-Boot-REST-MySQL
+# To Run it in Local system
 
 ### 1. You can clone it from github by running following command
 
@@ -73,3 +73,10 @@ can call following Endpoints by using POSTMAN
 ```
 
 ### Note - Replace <id> with actual id 
+
+#----> To Run it as a docker container
+
+1) Maven package - it will give you the war file in target folder.
+2) Docker build = it will create a image in your local by refering Dockerfile provided
+3) Run the image and access it
+
