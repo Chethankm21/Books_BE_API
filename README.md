@@ -1,4 +1,4 @@
-# CRUD-Spring-Boot-MySQL - new pr
+# CRUD-Spring-Boot-MySQL
 
 # To Run it in Local system
 
