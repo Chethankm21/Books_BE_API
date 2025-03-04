@@ -37,6 +37,10 @@ public class Book implements Serializable {
 	@Column(name="price")
 	private int price;
 
+	public Book() {
+		// This is needed for Hibernate
+	}
+
 	public Book(String s, String s1) {
 	}
 
